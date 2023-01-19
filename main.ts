@@ -51,6 +51,8 @@ function setMap () {
     } else if (currentLevel == 10) {
         tiles.setCurrentTilemap(tilemap`L10`)
     }
+    // Ao passar para o proximo nivel, posiciona o tanque amarelo (jogador) em uma area em branco. Com esta acao o tanque nao será posicionado em cima de partes com construçoes (tijolos)
+    tiles.placeOnRandomTile(mySprite2, assets.tile`transparency16`)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     music.pewPew.play()
